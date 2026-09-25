@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SankeyRemote" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:textColor">@color/btn_text</item>
+    </style>
+
+    <style name="RemoteBtn" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/btn_bg</item>
+        <item name="android:textColor">@color/btn_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:minHeight">52dp</item>
+    </style>
+
+    <style name="RemoteBtn.Power" parent="RemoteBtn">
+        <item name="android:backgroundTint">#B71C1C</item>
+    </style>
+
+    <style name="RemoteBtn.Ok" parent="RemoteBtn">
+        <item name="android:backgroundTint">@color/ok_blue</item>
+    </style>
+</resources>
