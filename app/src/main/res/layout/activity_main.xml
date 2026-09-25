@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SANKEY • Control IR"
+            android:textColor="@color/btn_text"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Solo televisores SANKEY • NEC 0x20 • 38 kHz"
+            android:textColor="#AAAAAA"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="● comprobando IR…"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvLastCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="Apunta al TV y pulsa un botón"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Fila superior -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <Button android:id="@+id/btnPower" style="@style/RemoteBtn.Power"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="⏻" />
+            <Button android:id="@+id/btnMute" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Mute" />
+            <Button android:id="@+id/btnSource" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Input" />
+            <Button android:id="@+id/btnSleep" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Sleep" />
+        </LinearLayout>
+
+        <!-- Vol / Ch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+            <Button android:id="@+id/btnVolUp" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Vol +" />
+            <Button android:id="@+id/btnVolDown" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Vol −" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <Button android:id="@+id/btnChUp" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="CH +" />
+            <Button android:id="@+id/btnChDown" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="CH −" />
+        </LinearLayout>
+
+        <!-- Números -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Números" android:textColor="#AAAAAA"
+            android:layout_marginTop="10dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <Button android:id="@+id/btnNum1" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="1" />
+            <Button android:id="@+id/btnNum2" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="2" />
+            <Button android:id="@+id/btnNum3" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="3" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <Button android:id="@+id/btnNum4" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="4" />
+            <Button android:id="@+id/btnNum5" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="5" />
+            <Button android:id="@+id/btnNum6" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="6" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <Button android:id="@+id/btnNum7" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="7" />
+            <Button android:id="@+id/btnNum8" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="8" />
+            <Button android:id="@+id/btnNum9" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="9" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <Button android:id="@+id/btnFav" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Fav" />
+            <Button android:id="@+id/btnNum0" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="0" />
+            <Button android:id="@+id/btnInfo" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Info" />
+        </LinearLayout>
+
+        <!-- Navegación -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Navegación" android:textColor="#AAAAAA"
+            android:layout_marginTop="10dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <Button android:id="@+id/btnMenu" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Menú" />
+            <Button android:id="@+id/btnUp" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="▲" />
+            <Button android:id="@+id/btnExit" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Salir" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <Button android:id="@+id/btnLeft" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="◀" />
+            <Button android:id="@+id/btnOk" style="@style/RemoteBtn.Ok"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="OK" />
+            <Button android:id="@+id/btnRight" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="▶" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <Button android:id="@+id/btnHome" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Home" />
+            <Button android:id="@+id/btnDown" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="▼" />
+            <Button android:id="@+id/btnSettings" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Ajustes" />
+        </LinearLayout>
+
+        <!-- Smart -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Smart TV" android:textColor="#AAAAAA"
+            android:layout_marginTop="10dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="2">
+            <Button android:id="@+id/btnNetflix" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Netflix" />
+            <Button android:id="@+id/btnYoutube" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="YouTube" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="2">
+            <Button android:id="@+id/btnMedia" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Media" />
+            <Button android:id="@+id/btnEpg" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="EPG" />
+        </LinearLayout>
+
+        <!-- Imagen -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Imagen y sonido" android:textColor="#AAAAAA"
+            android:layout_marginTop="10dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <Button android:id="@+id/btnAspect" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Aspect" />
+            <Button android:id="@+id/btnMts" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="MTS" />
+            <Button android:id="@+id/btnPmode" style="@style/RemoteBtn"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="P-Mode" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="4"
+            android:layout_marginTop="6dp" android:layout_marginBottom="20dp">
+            <Button android:id="@+id/btnRed"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:backgroundTint="#D32F2F" android:text="R" android:textColor="#FFFFFF" />
+            <Button android:id="@+id/btnGreen"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:backgroundTint="#388E3C" android:text="G" android:textColor="#FFFFFF" />
+            <Button android:id="@+id/btnYellow"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:backgroundTint="#FBC02D" android:text="Y" android:textColor="#000000" />
+            <Button android:id="@+id/btnBlue"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:backgroundTint="#1976D2" android:text="B" android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
